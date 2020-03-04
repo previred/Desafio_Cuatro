@@ -8,7 +8,10 @@
  -	La quinta implementación es solo una maqueta.
 
 
-## El desafío consiste  en generar un informe que debe ser enviado a arquitectura@previred.com  y debe contener el siguiente detalle:
+## El desafío consiste en:
+
+generar un informe que debe ser enviado a arquitectura@previred.com y debe contener el siguiente detalle:
+
  # Nombre Completo del postulante e información de contacto.
  # Vía por la que se enteró del desafío, estas pueden ser: Empresa de Outsourcing (indicar cuál), Twitter, LinkedIn, etc.
  # Generar un diagrama que explique la implementación en los casos 1 al 4.
