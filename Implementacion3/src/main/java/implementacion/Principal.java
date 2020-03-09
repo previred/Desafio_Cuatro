@@ -7,7 +7,7 @@ import java.util.logging.Logger;
  *
  * @author mgonzalez
  */
-public class ImplementaPatron {
+public class Principal {
     private final static Logger LOGGER = Logger.getLogger(ImplementaPatron.class.getName());
 
     /**

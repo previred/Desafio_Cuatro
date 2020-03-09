@@ -21,4 +21,6 @@
   - En el sexto punto se deben identificar los tipos de arquitectura.
   - Por ultimo indique cualesquiera condiciones adicionales que usted considere necesarios.
 
+## Adicionalmente
 
+ Además, debe implementar el desafío 1 que se encuentra en el siguiente repositorio https://github.com/previred/Desafio_Uno
