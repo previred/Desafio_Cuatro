@@ -7,13 +7,13 @@ import javax.swing.JOptionPane;
  *
  * @author mgonzalez
  */
-public class Ingreso extends OperacionesMatematicas{
+public class Ingreso {
 
-    private Organiza miOrganiza;
+    private OperacionesMatematicas operacionesMatematicas;
     private double mayor, menor;
 
     public Ingreso() {
-        this.miOrganiza = new Organiza();
+        this.operacionesMatematicas = new OperacionesMatematicas();
     }
 
     /**
@@ -25,16 +25,16 @@ public class Ingreso extends OperacionesMatematicas{
             double numero1 = Integer.parseInt(JOptionPane.showInputDialog("valor1: "));
             double numero2 = Integer.parseInt(JOptionPane.showInputDialog("valor2: "));
             /**
-             * Usa miOrganiza para obtener el mayor
+             * Usa operacionesMatematicas para obtener el mayor
              */
-            mayor = this.miOrganiza.calculaMayor(numero1, numero2);
+            mayor = this.operacionesMatematicas.calculaMayor(numero1, numero2);
             /**
-             * Usa miOrganiza para obtener el menor
+             * Usa operacionesMatematicas para obtener el menor
              */
-            menor = this.miOrganiza.calculaMenor(numero1, numero2);
+            menor = this.operacionesMatematicas.calculaMenor(numero1, numero2);
 
             JOptionPane.showMessageDialog(null, "La division entre:"
-                    + "" + mayor + "/" + menor + " =  " + dividir(mayor, menor));
+                    + "" + mayor + "/" + menor + " =  " + this.operacionesMatematicas.dividir(mayor, menor));
 
         } catch (HeadlessException | NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Error en el ingreso de datos ("+e.getMessage()+")");
