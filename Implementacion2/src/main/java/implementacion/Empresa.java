@@ -1,37 +1,25 @@
 package implementacion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author mgonzalez
  */
-public class Empresa {
-    private int id;
+public class Empresa extends GenericEntity<Integer> {
+
     private String nombre;
     private List<Persona> personas;
     
-    public Empresa(){
-    }
-    
     /**
-     * 
-     * @param id
      * @param nombre
-     * @param personas 
+     * @param id
      */
-    public Empresa(int id, String nombre, List<Persona> personas) {
-        this.id = id;
+    public Empresa(int id, String nombre) {
+        super(id);
         this.nombre = nombre;
-        this.personas = personas;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        personas = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -46,9 +34,12 @@ public class Empresa {
         return personas;
     }
 
-    public void setPersonas(List<Persona> personas) {
-        this.personas = personas;
+    public void addPersona(Persona persona) {
+        personas.add(persona);
     }
 
-    
+    @Override
+    public String displayEntity() {
+        return nombre;
+    }
 }

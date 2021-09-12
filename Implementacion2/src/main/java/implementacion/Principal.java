@@ -13,7 +13,9 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        EmpresaPersona empresa = new EmpresaPersona();
+        IStoreBuilder sb = new EmpresaStoreBuilder();
+        Store<Empresa> stEmpresa = sb.createStore();
+        EmpresaPersona empresa = new EmpresaPersona(stEmpresa);
         empresa.empresasId().forEach((id) -> {
             LOGGER.log(Level.INFO, "id = {0}", id);
         });
@@ -23,5 +25,4 @@ public class Principal {
             LOGGER.log(Level.INFO, "Nombres = {0}", persona);
         });
     }
-    
 }

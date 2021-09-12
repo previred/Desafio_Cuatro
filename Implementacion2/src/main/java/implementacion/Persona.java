@@ -6,17 +6,14 @@ import java.util.Date;
  *
  * @author mgonzalez
  */
-public class Persona {
+public class Persona extends GenericEntity<Integer>{
     private String primerNombre;
     private String segundoNombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
     private Date fechaNacimineto;
     private String correo;
-    
-    public Persona(){
-    }
-    
+
     /**
      * 
      * @param primerNombre
@@ -26,7 +23,8 @@ public class Persona {
      * @param fechaNacimineto
      * @param correo 
      */
-    public Persona(String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, Date fechaNacimineto, String correo) {
+    public Persona(int id, String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, Date fechaNacimineto, String correo) {
+        super(id);
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -34,8 +32,6 @@ public class Persona {
         this.fechaNacimineto = fechaNacimineto;
         this.correo = correo;
     }
-    
-    
     
     public String getPrimerNombre() {
         return primerNombre;
@@ -84,6 +80,10 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
-    
+
+    @Override
+    public String displayEntity() {
+        return getPrimerNombre() + " " + getApellidoPaterno() + " " +
+                getApellidoMaterno().substring(0, 1).toUpperCase() + ".";
+    }
 }
