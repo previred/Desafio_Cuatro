@@ -7,20 +7,22 @@ import java.util.stream.Collectors;
  *
  * @author mgonzalez
  */
-public class EmpresaPersona extends Store{
-    
+public class EmpresaPersona {
+
+    private Store<Empresa> empresasStore;
+
+    public EmpresaPersona(Store<Empresa> empresasStore) {
+        this.empresasStore = empresasStore;
+    }
+
     /**
      * Retorna la lista de empleados de una empresa por su id
      * @param idEmpresa id de la empresa
      * @return Lista de string con los nombres de las personas
      */
-    public List<String> personasEmpresa(int idEmpresa){
-        Empresa empresa = super.empresas.stream().filter(e-> e.getId() == idEmpresa).findFirst().orElseThrow(IllegalArgumentException::new);
-        List<Persona> personas = empresa.getPersonas();
-        return personas.stream().
-                map(p->p.getPrimerNombre()+" "+p.getApellidoPaterno()+" "+
-                        p.getApellidoMaterno().substring(0,1).toUpperCase()+".")
-                .collect(Collectors.toList());
+    public List<String> personasEmpresa(int idEmpresa) {
+        Empresa empresa = empresasStore.getEntity(idEmpresa);
+        return empresa.getPersonas().stream().map(p -> p.displayEntity()).collect(Collectors.toList());
     }
     
     /**
@@ -28,6 +30,6 @@ public class EmpresaPersona extends Store{
      * @return Lista de idis de empresas
      */
     public List<Integer> empresasId(){
-        return super.empresas.stream().map(m->m.getId()).collect(Collectors.toList());
+        return empresasStore.getIds().stream().map(m -> (Integer) m).collect(Collectors.toList());
     }
 }
