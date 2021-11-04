@@ -14,7 +14,7 @@
 
   - Nombre Completo del postulante e información de contacto.
   - Vía por la que se enteró del desafío, estas pueden ser: Empresa de Outsourcing (indicar cuál), Twitter, LinkedIn, etc.
-  - Generar un diagrama que explique la implementación en los casos 1 al 4.
+  - Generar un diagrama de clases que explique la implementación en los casos 1 al 4.
   - Enumerar todos los patrones de diseño encontrados en los casos 1 al 4
   - Enumerar todos los errores, falencias o posibles mejoras en los casos 1 al 4.
   - Para la quinta implementación se debe analizar, detallar los niveles y principios de arquitectura que usted cree están definidos en el código.
