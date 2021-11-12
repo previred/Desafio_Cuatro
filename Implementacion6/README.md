@@ -4,12 +4,15 @@
 
 # Indique detalle de implementación de los siguiente diagramas:
 
-Diagrama 1
-![Diagrama 1](Diagrama1.png)
+# Diagrama 1
+</br>
+<img src="Diagrama1.png" alt="drawing" width="600"/>
 
-Diagrama 2
-![Diagrama 2](Diagrama2.png)
+# Diagrama 2
+</br>
+<img src="Diagrama2.png" alt="drawing" width="500"/>
 
-Diagrama 3
-![Diagrama 2](Diagrama3.png)
+# Diagrama 3
+</br>
+<img src="Diagrama3.png" alt="drawing" width="300"/>
 
